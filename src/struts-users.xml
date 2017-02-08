@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	
+	<package name="users" extends="struts-default" namespace="">
+
+		<action name="logbyusername" class="usersaction" method="logByUsernameAndPwd">
+			<result name="success">person/logBySidSucc.jsp</result>
+		</action>
+		
+		
+		<action name="logadmin" class="usersaction" method="login">
+			<result name="toAdmin">index.jsp</result>
+			<result name="toMaster">index2.jsp</result>
+			<result name="toCustomer">person/index.jsp</result>
+			<result name="toLogin">checkin.jsp</result>
+		</action>
+		<action name="userlogout" class="usersaction" method="logout">
+			<result name="toLogin">../checkin.jsp</result>
+		</action>
+		<action name="listallusers" class="usersaction" method="listAllUsers">
+		<result name="success">jsp/system_account.jsp</result>
+		</action>
+		
+		<action name="addAddress" class="usersaction" method="addNewAddress">
+			<result name="success">jsp/third.jsp</result>
+			<result name="error">jsp/third.jsp</result>
+		</action>
+		<action name="deleteUser" class="usersaction" method="deleteUser">
+		    <result name="success">jsp/system_account.jsp</result>
+		</action>
+		
+		<action name="userInfo" class="usersaction" method="userInfo">
+		    <result name="success">jsp/user-info.jsp</result>
+		</action>
+		<action name="toUserInfo" class="usersaction" method="userInfo">
+		    <result name="success">jsp/change-user-info.jsp</result>
+		</action>
+		<action name="changeUserInfo" class="usersaction" method="changeUserInfo">
+		    <result name="success">jsp/change-user-info-success.jsp</result>
+		</action>
+	</package>
+
+
+</struts>

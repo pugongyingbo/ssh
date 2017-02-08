@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- 
+   这里主要是用来和数据库对接用的，每个信息的名称和长度必须和数据库中严格对应
+-->
+<hibernate-mapping>
+    <class name="com.py.beans.Info" table="info" catalog="sshtest">
+        <id name="iid" type="java.lang.Integer">
+            <column name="IId" length="20" />
+            <generator class="native"></generator>
+        </id>
+        <property name="informationtype" type="java.lang.String">
+            <column name="informationtype" length="20"  />
+        </property>
+        <property name="topic" type="java.lang.String">
+            <column name="topic" length="50" />
+        </property>
+        <property name="datetime" type="java.lang.String">
+            <column name="datetime" length="20"  />
+        </property>
+        <property name="author" type="java.lang.String">
+            <column name="author" length="20" />
+        </property>
+        <property name="content" type="java.lang.String">
+            <column name="content" length="200"/>
+        </property>
+    </class>
+</hibernate-mapping>

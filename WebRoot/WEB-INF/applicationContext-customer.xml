@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+        xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+	<bean id="customerdao" class="com.py.dao.impl.CustomerDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="customerbiz" class="com.py.biz.impl.CustomerBizImpl">
+		<property name="customerDao" ref="customerdao" ></property>	
+	</bean>
+	
+	<bean id="customeraction" class="com.py.action.CustomerAction" scope="prototype">
+		<property name="customerBiz" ref="customerbiz"></property>	
+			<property name="ammeterBiz" ref="ammeterbiz"></property>
+	</bean>
+	
+	</beans>

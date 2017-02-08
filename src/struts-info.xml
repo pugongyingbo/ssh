@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+	<package name="info" extends="struts-default" namespace="">
+		<!-- 查询全部信息 -->
+		<action name="findInfo" class="infoaction" method="findInfo">
+			<result name="success">person/paying.jsp</result>
+		</action>
+			<!-- 查询全部信息客户页面 -->
+		<action name="findInfo2" class="infoaction" method="findInfo">
+			<result name="success">person/main.jsp</result>
+		</action>
+		<!-- 通过id查找单条信息 -->
+		<action name="findById" class="infoaction" method="findById">
+			<result name="success">jsp/information-change.jsp</result>
+		</action>
+		<!-- 通过id查找单条信息2 -->
+		<action name="findById2" class="infoaction" method="findById">
+			<result name="success">person/informationtxt.jsp</result>
+		</action>
+		<!-- 管理信息页面 显示全部信息 -->
+		<action name="releaseInfo" class="infoaction" method="findInfo">
+			<result name="success">jsp/information_release.jsp</result>
+		</action>
+		<!-- 按id删除单条信息 -->
+		<action name="delInfo" class="infoaction" method="delInfo">
+			<result type="redirectAction" name="success">releaseInfodel</result>
+		</action>
+		<!-- 删除完后，跳转到显示全部信息 -->
+		<action name="releaseInfodel" class="infoaction" method="findInfo">
+			<result name="success">jsp/information_release.jsp</result>
+		</action>
+		<!-- 新增信息，跳转到paying -->
+		<action name="addInfo" class="infoaction" method="addInfo">
+			<result name="success">person/paying.jsp</result>
+		</action>
+		<!-- 新增信息跳转到 管理信息页面  -->
+		<action name="addInformation" class="infoaction" method="addinformation">
+			<result type="redirectAction" name="success">releaseInfodel</result>
+		</action>
+		<!-- 修改单条信息并且跳转到 管理信息页面  -->
+		<action name="updateinformation" class="infoaction" method="updateinformation">
+			<result type="redirectAction" name="success">releaseInfodel</result>
+		</action>
+		<!-- 按照类型查找新闻  -->
+		<action name="findByType" class="infoaction" method="findByType">
+			<result name="success">person/information.jsp</result>
+		</action>
+	</package>
+
+</struts>

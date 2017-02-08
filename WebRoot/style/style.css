@@ -1,0 +1,150 @@
+@charset "utf-8";
+
+body {
+	font-family: "宋体";
+	font-size: 12px;
+}
+
+#box {
+	height: auto;
+	width: 750px;
+	margin: 0 auto;
+}
+
+#top {
+	height: 97px;
+	width: 750px;
+	float: left;
+}
+
+#left {
+	float: left;
+	width: 176px;
+	background-image: url(../111_r5_c1.gif);
+	background-repeat: repeat-y;
+	height: 1px;
+	margin-left: -10px;
+	margin-top: -15px;
+	text-align: center;
+}
+
+#right {
+	width: 95%;
+	float: left;
+	margin-left: 9px;
+}
+
+#right_top {
+	height: 20px;
+	width: 750px;
+}
+
+#right_form {
+	margin: 10px;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 20px;
+}
+
+#chaozuoyuanguli1 {
+	font-family: "宋体";
+	font-size: 12px;
+	line-height: 30px;
+	font-weight: bold;
+	color: #6374ce;
+	background-image: url(../images/411.gif);
+	background-repeat: repeat-y;
+	height: auto;
+	width: auto;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+#right_form #f_chaozuoyuanguli #chaozuoyuanguli1 {
+	width: 180px;
+	margin-top: 5px;
+	margin-right: 10px;
+	margin-bottom: 5px;
+	margin-left: 15px;
+}
+
+#f_chaozuoyuanguli_xialaxuanzhe {
+	width: 180px;
+	margin-right: 10px;
+	margin-left: 15px;
+	border: 1px solid #ccc;
+}
+
+.font02 {
+	font-family: "宋体";
+	font-size: 12px;
+	line-height: 30px;
+	font-weight: bold;
+	color: #6374CE;
+	padding-left: 25px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+#f_reg_name {
+	width: 180px;
+	margin-right: 10px;
+	margin-left: 15px;
+	border: 1px solid #CCCCCC;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.font01 {
+	font-family: "宋体";
+	font-size: 12px;
+	font-weight: normal;
+	color: #575757;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+#f_reg_ok {
+	width: 68px;
+	height: 44px;
+	background-image: url(../images/415.gif);
+	background-repeat: no-repeat;
+	margin-left: 250px;
+}
+
+.form_table1 {
+	width: 520px;
+	padding-bottom: 15px;
+	border: 1px solid #666;
+	color: rgb(70, 122, 167);
+	font-size: 1.1em;
+	border-collapse: collapse;
+}
+
+.form_table1 td {
+	align: left;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background: #AEBFDF;
+	border: 1px solid #666;
+	color: #000;
+}
+
+.form_table1 .formtb_right {
+	background: #FCEDDA;
+	color: #000;
+}
+
+p input {
+	background: #264286;
+	color: #fff;
+	height: 23px;
+	padding-top: 1px;
+	padding-left: 1px;
+	padding-right: 1px;
+}
+
+.form_pd {
+	padding-left: 50px;
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	
+	<package name="customer" extends="struts-default" namespace="">
+
+		<action name="logbysid" class="customeraction" method="loginBySidAndName">
+			<result name="success">person/logBySidSucc.jsp</result>
+		</action>
+		
+		<action name="listallcustomer" class="customeraction" method="listAllCustomers">
+		<result name="success">jsp/electrical_user.jsp</result>
+		</action>
+		
+		<!-- 按id删除单条信息 -->	
+		<action name="delCustomer" class="customeraction" method="delCustomer">
+		 <result name="success">jsp/electrical_user.jsp</result>
+		 </action>	
+		 
+		 <!-- 通过id查找单条信息 -->
+		 <action name="findByCid" class="customeraction" method="findByCid">
+		<result name="success">jsp/customer_change.jsp</result>
+		</action>
+		
+		<!-- 修改单条信息并且跳转到 管理信息页面  -->
+		<action name="update" class="customeraction" method="update">
+			<result type="redirectAction" name="success">listallcustomer</result>
+		</action>
+		
+		<action name="findByAddress" class="customeraction" method="findByAddress">
+		<result name="success">person/customerjiaofei.jsp</result>
+		</action>
+		
+		 <action name="SearchALL" class="customeraction" method="listAllCutomer">
+		 <result name="success">jsp/basical_information.jsp</result>
+		 </action>
+		 
+	</package>
+
+</struts>
